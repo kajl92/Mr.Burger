@@ -1,0 +1,80 @@
+.menu {
+  background: url('../img/background/menu.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.section-title_color_white {
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  color: #fff;
+}
+
+.menu-acco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.menu-acco__item {
+  display: flex;
+  background: rgba($black, .93)
+}
+
+.menu-acco__img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @include tablets() {
+    align-items: inherit;
+    padding-bottom: rem(40px);
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: rgba(20, 20, 20, .7);
+  }
+}
+
+.menu-acco__link {
+  @include gagalin();
+  font-size: rem(40px);
+  color: #fff;
+  text-decoration: none;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  padding: 0 rem(10px);
+}
+
+.menu-acco__content {
+  width: 0;
+  overflow: hidden;
+}
+
+.active_content {
+  width: 100%;
+}
+
+.menu-acco__desc {
+  width: rem(540px);
+}
+
+.menu-acco__text {
+  @include ubuntu(light);
+  font-size: rem(14px);
+  color: #fff;
+  line-height: rem(24px);
+  padding: rem(60px) rem(30px);
+}

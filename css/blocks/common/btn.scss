@@ -1,0 +1,17 @@
+.btn {
+  @include ubuntu(medium);
+  display: inline-flex;
+  padding: 10px 15px;
+  background: $orange;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: rem(13px);
+  border-radius: rem(5px);
+  transition: .3s;
+  
+  &:hover {
+    transition: .3s;
+    background: $red;
+  }
+}

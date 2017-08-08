@@ -1,0 +1,23 @@
+.section__title {
+  @include gagalin();
+  font-size: rem(72px);
+  color: $yellow;
+  padding-top: rem(50px);
+  margin-bottom: rem(25px);
+  line-height: rem(85px);
+
+  &_color_black {
+    color: $black;
+  }
+
+  @include tablets {
+    padding-top: 0;
+    text-align: center;
+  }
+  
+  @include phones {
+    font-size: rem(63px);
+  }
+
+
+}
