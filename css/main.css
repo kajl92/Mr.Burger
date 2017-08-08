@@ -767,8 +767,9 @@ footer {
     .best__item {
       flex-direction: row; } }
 
-.best__desc {
-  text-align: left; }
+@media screen and (max-width: 480px) {
+  .best__desc {
+    text-align: left; } }
 
 .best__title {
   font-size: 1.5rem;

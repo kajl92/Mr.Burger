@@ -41,11 +41,10 @@
   }
 }
 
-.best__icon {
-}
-
 .best__desc {
-  text-align: left;
+  @include phones {
+    text-align: left;
+  }
 }
 
 .best__title {
