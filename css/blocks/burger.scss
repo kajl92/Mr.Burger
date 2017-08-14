@@ -1,0 +1,77 @@
+.burger {
+  background: #f9b43b;
+  background: -moz-linear-gradient(top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: -webkit-linear-gradient(top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b', GradientType=0);
+  position: relative;
+  display: flex;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.scroll__svg {
+  width: rem(27px);
+  height: rem(27px);
+  transform: rotate(90deg);
+  fill: #fff;
+}
+
+.scroll__svg_transform_rotate {
+  transform: rotate(-90deg);
+}
+
+.burger__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
+}
+
+.burger__img {
+  max-width: rem(505px);
+  max-height: rem(329px);
+}
+
+.burger__image-pic {
+  width: 100%;
+}
+
+.burger__right {
+  width: 30%;
+
+  @include tablets {
+    width: 80%;
+    text-align: center;
+  }
+  
+  .section__title {
+    color: #fff;
+    padding-top: 0;
+  }  
+}
+
+.burger__desc {
+  @include ubuntu(light);
+  color: #fff;
+  font-size: rem(13px);
+  line-height: rem(24px);
+}
+
+.burger__cash {
+  @include gagalin();
+  color: $orange;
+  font-size: rem(72px);
+}
+
+.burger__cash-small {
+  font-size: rem(30px);
+}

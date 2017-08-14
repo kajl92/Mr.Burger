@@ -14,7 +14,7 @@
     <div class="maincontent">
 
       <section class="section hero">
-        <div class="container hero__wrapper">
+        <div class="container section_position_center hero__wrapper">
           <header class="header">
             <div class="logo">
               <a href="" class="logo__link">
@@ -50,7 +50,6 @@
                   <div class="hamburger-menu-link__bars"></div>
                 </a>
               </div>
-
             </div>
           </header>
           <div class="hero__container">
@@ -79,7 +78,7 @@
       </section>
 
       <section class="section best">
-        <div class="container">
+        <div class="container section_position_center">
           <div class="section__title section__title_black">Мы лучшие</div>
           <ul class="best__list">
             <li class="best__item">
@@ -123,6 +122,124 @@
             </li>
           </ul>
         </div>
+      </section>
+
+      <section class="section burger">
+        <div class="container">
+          <div class="scroll">
+            <a href="#" class="scroll__link">
+              <svg class="scroll__svg">
+                <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="burger__menu">
+            <div class="burger__left">
+              <div class="burger__img">
+                <img src="./img/content/beger-black.png" alt="" class="burger__image-pic">
+              </div>
+            </div>
+            <div class="burger__right">
+              <div class="section__title">
+                Dark BEEF Burger
+              </div>
+              <div class="burger__desc">
+                <p>
+                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                  луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                </p>
+              </div>
+              <div class="burger__value">
+                <span class="burger__cash">500<span class="burger__cash-small">рублей</span> </span>
+                <a href="#" class="btn">Заказать</a>
+              </div>
+            </div>
+          </div>
+          <div class="scroll">
+            <a href="#" class="scroll__link">
+              <svg class="scroll__svg scroll__svg_transform_rotate">
+                <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="ingredients">
+            <div class="ingredients__wrapper">
+              <div class="ingredients__pic">
+                <svg class="ingredients__svg">
+                  <use xlink:href="./img/sprite/sprite.svg#burger"></use>
+                </svg>
+              </div>
+              <div class="ingredients__text">Состав</div>
+            </div>
+          </div>
+          <div class="composition">
+            <ul class="composition__list">
+              <li class="composition__item">
+                <div class="composition__pic">
+                  <svg class="composition__svg" fill="#e25028">
+                    <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                  </svg>
+                </div>
+                <div class="composition__name">Говядина</div>
+                <div class="composition__weight">300г</div>
+              </li>
+              <li class="composition__item">
+                <div class="composition__pic">
+                  <svg class="composition__svg" fill="#f8b43a">
+                    <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                  </svg>
+                </div>
+                <div class="composition__name">Булочки</div>
+                <div class="composition__weight">100г</div>
+              </li>
+              <li class="composition__item">
+                <div class="composition__pic">
+                  <svg class="composition__svg" fill="#8ac03e">
+                    <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                  </svg>
+                </div>
+                <div class="composition__name">Зелень</div>
+                <div class="composition__weight">30г</div>
+              </li>
+              <li class="composition__item">
+                <div class="composition__pic">
+                  <svg class="composition__svg" fill="#e25028">
+                    <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                  </svg>
+                </div>
+                <div class="composition__name">Соус</div>
+                <div class="composition__weight">150г</div>
+              </li>
+              <li class="composition__item">
+                <div class="composition__pic">
+                  <svg class="composition__svg" fill="#8ac03e">
+                    <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                  </svg>
+                </div>
+                <div class="composition__name">Овощи</div>
+                <div class="composition__weight">200г</div>
+              </li>
+              <li class="composition__item">
+                <div class="composition__pic">
+                  <svg class="composition__svg" fill="#f8b43a">
+                    <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                  </svg>
+                </div>
+                <div class="composition__name">Сыр</div>
+                <div class="composition__weight">80г</div>
+              </li>
+            </ul>
+          </div>
+          <div class="kkal">
+            <div class="kkal__pic">
+              <svg class="kkal__svg" fill="#fff">
+                <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+              </svg>
+              <div class="kkal__weight">1200 <span class="kkal__text"> ккал</span></div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <section class="section team">
@@ -440,7 +557,7 @@
       </section>
 
       <section class="section order">
-        <div class="container">
+        <div class="container section_position_center">
           <div class="section__title">Закажите доставку</div>
           <form class="order__form-tag" id="order-form">
             <div class="order__form">
@@ -518,7 +635,7 @@
         </div>
       </section>
 
-      <section class="section contacts">
+      <section class="section contacts" id="map"> 
         <footer class="footer">
           <div class="container">
             <div class="footer__contacts">
@@ -581,6 +698,46 @@
     </div>
   </div>
 
+  <div class="phone-menu">
+    <div class="container section_position_center">
+      <header class="header">
+        <div class="logo">
+          <a href="" class="logo__link">
+          <img src="./img/icons/logo.svg" alt="" class="logo__img">
+        </a>
+        </div>
+        <div class="cross">
+          <a href="#" class="cross__link">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px">
+              <path fill-rule="evenodd" opacity="0.702" fill="rgb(255, 255, 255)" d="M12.828,9.999 L18.485,15.656 C19.266,16.437 19.266,17.703 18.485,18.485 C17.704,19.266 16.438,19.266 15.657,18.485 L10.000,12.828 L4.343,18.485 C3.562,19.266 2.296,19.266 1.515,18.485 C0.734,17.703 0.734,16.437 1.515,15.656 L7.172,9.999 L1.515,4.342 C0.734,3.561 0.734,2.295 1.515,1.514 C2.296,0.733 3.562,0.733 4.343,1.514 L10.000,7.171 L15.657,1.514 C16.438,0.733 17.704,0.733 18.485,1.514 C19.266,2.295 19.266,3.561 18.485,4.342 L12.828,9.999 Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </header>
+      <ul class="phone-menu__list">
+        <li class="phone-menu__item">
+          <a href="#" class="phone-menu__link">Почему мы</a>
+        </li>
+        <li class="phone-menu__item">
+          <a href="#" class="phone-menu__link">Меню</a>
+        </li>
+        <li class="phone-menu__item">
+          <a href="#" class="phone-menu__link">Советы</a>
+        </li>
+        <li class="phone-menu__item">
+          <a href="#" class="phone-menu__link">Кто мы</a>
+        </li>
+        <li class="phone-menu__item">
+          <a href="#" class="phone-menu__link">Свяжитесь с нами</a>
+        </li>
+        <li class="phone-menu__item">
+          <a href="#" class="phone-menu__link">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <ul class="fixed-menu">
     <li class="fixed-menu__item active">
       <a href="#" class="fixed-menu__link"></a>
@@ -608,6 +765,11 @@
     </li>
   </ul>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="./js/map.js"></script>
+  <script src="./js/phone-menu.js"></script>
+  <script src="./js/composition.js"></script>
 </body>
 
 </html>

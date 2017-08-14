@@ -1,0 +1,43 @@
+.composition {
+  background: rgba(255, 255, 255, .9);
+  border-radius: rem(5px);
+  width: rem(270px);
+  position: absolute;
+  top: 14%;
+  left: 27%;
+  display: none;
+
+  @include tablets {
+    top: 5%;
+    left: 12%;
+  }
+
+  @include phones {
+    left: 17%;
+  }
+
+}
+
+.composition__list {
+  padding: rem(18px) rem(20px); 
+}
+
+.composition__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.composition__svg {
+  width: rem(47px);
+  height: rem(43px);
+}
+
+.composition__name {
+  @include ubuntu(medium);
+  font-size: rem(14px);
+}
+
+.composition__weight {
+  font-size: rem(14px);
+}

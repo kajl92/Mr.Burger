@@ -26,9 +26,6 @@ body {
   margin: 0 auto;
   position: relative;
   width: 95%;
-  max-width: rem(940px);
-  display: flex;
-  flex-direction: column;
 }
 
 .wrapper {
@@ -85,6 +82,7 @@ footer {
 
 .section_position_center {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  max-width: rem(940px);
+  flex-direction: column;
 }

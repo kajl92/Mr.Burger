@@ -1,0 +1,35 @@
+.ingredients {
+  background: rgba($orange, .44);
+  border-radius: rem(5px);    
+  position: absolute;
+  top: 14%;
+  left: 21%;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    background: $orange;
+  }
+
+  @include tablets {
+    top: 5%;
+    left: 0;
+  }
+
+}
+
+.ingredients__wrapper {
+  padding: rem(10px) rem(22px);
+}
+
+.ingredients__svg {
+  width: rem(46px);
+  height: rem(46px);
+  fill: #fff;
+}
+
+.ingredients__text {
+  @include gagalin();
+  font-size: rem(14px);
+  color: #fff;
+}

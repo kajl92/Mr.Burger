@@ -1,8 +1,8 @@
-.contacts {
-  background: url('../img/map/map-marker.jpg') center center no-repeat;
-  background-size: cover;
-  position: relative
-}
+// .contacts {
+//   background: url('../img/map/map-marker.jpg') center center no-repeat;
+//   background-size: cover;
+//   position: relative
+// }
 
 .footer {
   background: url('../img/background/footer.jpg') center center no-repeat;
@@ -10,6 +10,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1;
 }
 
 .footer__contacts {

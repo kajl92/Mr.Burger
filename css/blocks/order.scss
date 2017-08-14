@@ -3,7 +3,7 @@
   background-size: cover;
   display: flex;
   align-items: center;
-  .section-title {
+  .section__title {
     text-align: center;
   }
 }
@@ -11,22 +11,18 @@
 .order__form {
   margin-left: -5%;
   display: flex;
-
   @include tablets {
     flex-direction: column;
     align-items: center;
   }
-
 }
 
 .order__form-col {
   width: 45%;
   margin-left: 5%;
-
   @include phones {
     width: 95%;
   }
-
 }
 
 .order__form-row {
@@ -69,6 +65,7 @@
 }
 
 .order__form-buttons {
+  margin-left: rem(10px);
   @include phones {
     display: flex;
     flex-direction: column;
@@ -141,7 +138,7 @@
   .order__radio-elem:checked {
     &+.order__radio-fake {
       &:after {
-        background: url("") 50% no-repeat transparent;
+        background: url("../img/icons/checkmark.png") 50% no-repeat transparent;
         background-size: contain;
         width: rem(11px);
         height: rem(9px);
@@ -163,7 +160,6 @@
   cursor: pointer;
   outline: none;
   transition: .3s;
-
   &:hover {
     background: $red;
   }
@@ -174,7 +170,6 @@
   padding-right: 0;
   text-transform: none;
   background: transparent;
-
   &:hover {
     background: none;
   }
