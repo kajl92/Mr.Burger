@@ -3,7 +3,7 @@
   border-radius: rem(5px);    
   position: absolute;
   top: 14%;
-  left: 21%;
+  left: 24%;
   cursor: pointer;
   transition: .3s;
 
@@ -12,8 +12,8 @@
   }
 
   @include tablets {
-    top: 5%;
-    left: 0;
+    top: 3%;
+    left: 15%;
   }
 
 }

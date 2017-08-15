@@ -125,121 +125,137 @@
       </section>
 
       <section class="section burger">
-        <div class="container">
-          <div class="scroll">
-            <a href="#" class="scroll__link">
-              <svg class="scroll__svg">
-                <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
+        <div class="container section_position_center">
+          <ul class="burger__list">
+            <li class="burger__item">
+              <div class="scroll__image">
+                <a href="#" class="scroll__link">
+                  <svg class="scroll__svg">
+                    <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
+                  </svg>
+                </a>
+              </div>
+            </li>
+            <li class="burger__item">
+              <div class="burger__present">
+                <div class="burger__img">
+                  <img src="./img/content/beger-black.png" alt="" class="burger__picture">
+                </div>
+                <div class="burger__wrapper">
+                  <div class="burger__desc">
+                    <div class="section__title">Dark BEEF Burger</div>
+                    <div class="burger__text">
+                      <p>
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="burger__value">
+                    <span class="burger__cash">500<span class="burger__cash-small">рублей</span> </span>
+                    <a href="#" class="btn">Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="burger__item">
+              <div class="scroll__image">
+                <a href="#" class="scroll__link">
+                  <svg class="scroll__svg scroll__svg_transform_rotate">
+                    <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ingredients">
+          <div class="ingredients__wrapper">
+            <div class="ingredients__pic">
+              <svg class="ingredients__svg">
+                <use xlink:href="./img/sprite/sprite.svg#burger"></use>
               </svg>
-            </a>
-          </div>
-          <div class="burger__menu">
-            <div class="burger__left">
-              <div class="burger__img">
-                <img src="./img/content/beger-black.png" alt="" class="burger__image-pic">
-              </div>
             </div>
-            <div class="burger__right">
-              <div class="section__title">
-                Dark BEEF Burger
-              </div>
-              <div class="burger__desc">
-                <p>
-                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-                  луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-                </p>
-              </div>
-              <div class="burger__value">
-                <span class="burger__cash">500<span class="burger__cash-small">рублей</span> </span>
-                <a href="#" class="btn">Заказать</a>
-              </div>
-            </div>
-          </div>
-          <div class="scroll">
-            <a href="#" class="scroll__link">
-              <svg class="scroll__svg scroll__svg_transform_rotate">
-                <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="ingredients">
-            <div class="ingredients__wrapper">
-              <div class="ingredients__pic">
-                <svg class="ingredients__svg">
-                  <use xlink:href="./img/sprite/sprite.svg#burger"></use>
-                </svg>
-              </div>
-              <div class="ingredients__text">Состав</div>
-            </div>
+            <div class="ingredients__text">Состав</div>
           </div>
           <div class="composition">
-            <ul class="composition__list">
-              <li class="composition__item">
-                <div class="composition__pic">
-                  <svg class="composition__svg" fill="#e25028">
-                    <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+            <div class="composition__wrapper">
+              <ul class="composition__list">
+                <li class="composition__item">
+                  <div class="composition__pic">
+                    <svg class="composition__svg" fill="#e25028">
+                      <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__name">Говядина</div>
+                  <div class="composition__weight">300г</div>
+                </li>
+                <li class="composition__item">
+                  <div class="composition__pic">
+                    <svg class="composition__svg" fill="#f8b43a">
+                      <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__name">Булочки</div>
+                  <div class="composition__weight">100г</div>
+                </li>
+                <li class="composition__item">
+                  <div class="composition__pic">
+                    <svg class="composition__svg" fill="#8ac03e">
+                      <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__name">Зелень</div>
+                  <div class="composition__weight">30г</div>
+                </li>
+                <li class="composition__item">
+                  <div class="composition__pic">
+                    <svg class="composition__svg" fill="#e25028">
+                      <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__name">Соус</div>
+                  <div class="composition__weight">150г</div>
+                </li>
+                <li class="composition__item">
+                  <div class="composition__pic">
+                    <svg class="composition__svg" fill="#8ac03e">
+                      <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__name">Овощи</div>
+                  <div class="composition__weight">200г</div>
+                </li>
+                <li class="composition__item">
+                  <div class="composition__pic">
+                    <svg class="composition__svg" fill="#f8b43a">
+                      <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__name">Сыр</div>
+                  <div class="composition__weight">80г</div>
+                </li>
+              </ul>
+              <div class="cross">
+                <a href="#" class="cross__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px">
+                    <path fill-rule="evenodd" opacity="0.702" fill="#eb8262" d="M12.828,9.999 L18.485,15.656 C19.266,16.437 19.266,17.703 18.485,18.485 C17.704,19.266 16.438,19.266 15.657,18.485 L10.000,12.828 L4.343,18.485 C3.562,19.266 2.296,19.266 1.515,18.485 C0.734,17.703 0.734,16.437 1.515,15.656 L7.172,9.999 L1.515,4.342 C0.734,3.561 0.734,2.295 1.515,1.514 C2.296,0.733 3.562,0.733 4.343,1.514 L10.000,7.171 L15.657,1.514 C16.438,0.733 17.704,0.733 18.485,1.514 C19.266,2.295 19.266,3.561 18.485,4.342 L12.828,9.999 Z"
+                    />
                   </svg>
-                </div>
-                <div class="composition__name">Говядина</div>
-                <div class="composition__weight">300г</div>
-              </li>
-              <li class="composition__item">
-                <div class="composition__pic">
-                  <svg class="composition__svg" fill="#f8b43a">
-                    <use xlink:href="./img/sprite/sprite.svg#buns"></use>
-                  </svg>
-                </div>
-                <div class="composition__name">Булочки</div>
-                <div class="composition__weight">100г</div>
-              </li>
-              <li class="composition__item">
-                <div class="composition__pic">
-                  <svg class="composition__svg" fill="#8ac03e">
-                    <use xlink:href="./img/sprite/sprite.svg#salad"></use>
-                  </svg>
-                </div>
-                <div class="composition__name">Зелень</div>
-                <div class="composition__weight">30г</div>
-              </li>
-              <li class="composition__item">
-                <div class="composition__pic">
-                  <svg class="composition__svg" fill="#e25028">
-                    <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
-                  </svg>
-                </div>
-                <div class="composition__name">Соус</div>
-                <div class="composition__weight">150г</div>
-              </li>
-              <li class="composition__item">
-                <div class="composition__pic">
-                  <svg class="composition__svg" fill="#8ac03e">
-                    <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
-                  </svg>
-                </div>
-                <div class="composition__name">Овощи</div>
-                <div class="composition__weight">200г</div>
-              </li>
-              <li class="composition__item">
-                <div class="composition__pic">
-                  <svg class="composition__svg" fill="#f8b43a">
-                    <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
-                  </svg>
-                </div>
-                <div class="composition__name">Сыр</div>
-                <div class="composition__weight">80г</div>
-              </li>
-            </ul>
-          </div>
-          <div class="kkal">
-            <div class="kkal__pic">
-              <svg class="kkal__svg" fill="#fff">
-                <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
-              </svg>
-              <div class="kkal__weight">1200 <span class="kkal__text"> ккал</span></div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-
+        <div class="kkal">
+          <div class="kkal__pic">
+            <svg class="kkal__svg" fill="#fff">
+              <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+            </svg>
+            <div class="kkal__weight">1200 <span class="kkal__text"> ккал</span></div>
+          </div>
+        </div>
       </section>
 
       <section class="section team">
@@ -347,7 +363,7 @@
           Меню
         </div>
         <ul class="menu-acco">
-          <li class="menu-acco__item">
+          <li class="menu-acco__item active">
             <div class="menu-acco__img" style="background-image: url(./img/content/menu3.jpg)">
               <a href="#" class="menu-acco__link">Для мясоедов</a>
             </div>
@@ -635,7 +651,7 @@
         </div>
       </section>
 
-      <section class="section contacts" id="map"> 
+      <section class="section contacts" id="map">
         <footer class="footer">
           <div class="container">
             <div class="footer__contacts">

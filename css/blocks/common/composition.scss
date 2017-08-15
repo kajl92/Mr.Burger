@@ -3,19 +3,34 @@
   border-radius: rem(5px);
   width: rem(270px);
   position: absolute;
-  top: 14%;
-  left: 27%;
+  top: 0;
+  left: 100%;
   display: none;
 
   @include tablets {
-    top: 5%;
-    left: 12%;
+    top: 0;
+    left: 100%;
   }
 
   @include phones {
-    left: 17%;
+    left: 100%;
   }
 
+}
+
+.composition__wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  .cross {
+    display: none;
+    margin-top: 20px;
+    margin-right: 20px;
+
+    @include tablets {
+      display: inherit;
+    }
+  }
 }
 
 .composition__list {
@@ -36,6 +51,7 @@
 .composition__name {
   @include ubuntu(medium);
   font-size: rem(14px);
+  margin: 0 rem(20px);
 }
 
 .composition__weight {
