@@ -70,15 +70,14 @@
 	overflow: hidden;
 }
 
-.active_content {
-  width: 100%;
-}
+// .active_content {
+//   width: 100%;
+// }
 
 .menu-acco__text {
   @include ubuntu(light);
 	font-size: rem(14px);
 	color: #fff;
 	padding: rem(60px) rem(30px);
-	width: 100%;
   line-height: 1.8;
 }

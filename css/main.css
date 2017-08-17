@@ -1302,16 +1302,12 @@ footer {
   width: 0;
   overflow: hidden; }
 
-.active_content {
-  width: 100%; }
-
 .menu-acco__text {
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   color: #fff;
   padding: 3.75rem 1.875rem;
-  width: 100%;
   line-height: 1.8; }
 
 .reviews {
