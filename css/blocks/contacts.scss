@@ -1,10 +1,18 @@
+.contacts {
+  position: relative;
+}
+
+.yandex-map {
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+}
+
 .footer {
   background: url('../img/background/footer.jpg') center center no-repeat;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
 }
 
 .footer__contacts {

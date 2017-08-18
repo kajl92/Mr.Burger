@@ -11,30 +11,56 @@
   bottom: 0;
   width: 50%;
   background: rgba($black, .93);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 6%;
   
   @include tablets() {
     width: 100%;
+    padding-top: 14%;
+  }
+
+  @include phones() {
+    padding-top: 10%;
+  }
+}
+
+.team-acco {
+  margin-left: rem(85px);
+  
+  @include tablets() {
+    margin-left: 0;
   }
 }
 
 .team__content {
-  width: 70%;
+  width: 86%;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include tablets() {
     text-align: center;
+    width: inherit;
   }
 }
 
 .team-title_position {
   padding: 0;
-  margin-bottom: rem(65px);
+  margin-bottom: rem(73px);
+  @include tablets() {
+    margin-bottom: rem(120px);
+  }
+
+  @include phones() {
+    margin-bottom: rem(105px);
+  }
 }
 
 .team-acco__item {
-  margin-bottom: rem(40px);
+  margin-bottom: rem(28.8px);
+
+  @include phones() {
+    margin-bottom: rem(17.6px);
+  }
  
   &.active {
     .team-acco__content {
@@ -64,6 +90,10 @@
   @include tablets() {
     justify-content: center;
     font-size: rem(24px);
+  }
+
+  @include phones() {
+    font-size: rem(30px);
   }
 
   &:before {
@@ -98,8 +128,14 @@
   overflow: hidden;
   position: relative;
 
-  @include tablets() {
+  @include tablets {
     margin-bottom: 20px;
+  }
+
+  @include phones {
+    margin-bottom: 20px;
+    width: rem(125px);
+    height: rem(125px);
   }
 }
 
@@ -115,9 +151,13 @@
   width: 40%;
   margin-left: rem(20px);
 
-  @include tablets() {
+  @include tablets {
     margin-left: 0;
     width: 60%;
+  }
+
+  @include phones {
+    width: 74%;
   }
 }
 
@@ -126,10 +166,20 @@
   font-size: rem(14px);
   color: #fff;
   margin-bottom: rem(15px);
+
+  @include tablets {
+  font-size: rem(17px);
+    
+  }
 }
 
 .team-acco__desc-text {
   @include ubuntu(light);
   font-size: rem(14px);
   color: #fff;
+
+  @include phones {
+    font-size: rem(17px);
+    line-height: rem(24px);
+  }
 }

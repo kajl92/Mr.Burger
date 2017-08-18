@@ -6,15 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная страница</title>
+  <link rel="stylesheet" href="./css/jquery.fullpage.css">
   <link rel="stylesheet" href="./css/jquery.fancybox.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="maincontent">
+    <div class="maincontent" id="fullpage">
 
-      <section class="section hero">
+
+      <section class="section slide hero">
         <div class="container section_position_center hero__wrapper">
           <header class="header">
             <div class="logo">
@@ -78,7 +80,7 @@
         </div>
       </section>
 
-      <section class="section best">
+      <section class="section slide best">
         <div class="container section_position_center">
           <div class="section__title section__title_black">Мы лучшие</div>
           <ul class="best__list">
@@ -125,7 +127,7 @@
         </div>
       </section>
 
-      <section class="section burger">
+      <section class="section slide burger">
         <div class="container section_position_center">
           <ul class="burger__list">
             <li class="burger__item">
@@ -259,7 +261,7 @@
         </div>
       </section>
 
-      <section class="section team">
+      <section class="section slide team">
         <div class="team__section">
           <div class="team__content">
             <div class="section__title team-title_position">
@@ -359,7 +361,7 @@
         </div>
       </section>
 
-      <section class="section menu">
+      <section class="section slide menu">
         <div class="section__title section-title_color_white">
           Меню
         </div>
@@ -424,7 +426,7 @@
         </ul>
       </section>
 
-      <section class="section reviews">
+      <section class="section slide reviews">
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image: url(./img/photo/photo-1.jpg)">
             <div class="reviews__hover">
@@ -439,7 +441,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
+                  <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -457,7 +459,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
+                  <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -475,7 +477,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
+                  <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -493,7 +495,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
+                  <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -511,7 +513,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
+                  <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -529,7 +531,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
+                  <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -547,7 +549,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
+                  <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -596,7 +598,7 @@
         </div>
       </section>
 
-      <section class="section order">
+      <section class="section slide order">
         <div class="container section_position_center">
           <div class="section__title">Закажите доставку</div>
           <form class="order__form-tag" id="order-form">
@@ -675,7 +677,8 @@
         </div>
       </section>
 
-      <section class="section contacts" id="map">
+      <section class="section slide contacts">
+        <div class="yandex-map" id="map"></div>
         <footer class="footer">
           <div class="container">
             <div class="footer__contacts">
@@ -778,38 +781,38 @@
     </div>
   </div>
 
-  <ul class="fixed-menu">
-    <li class="fixed-menu__item active">
-      <a href="#" class="fixed-menu__link"></a>
+  <ul class="fixed-menu" id="myMenu">
+    <li data-menuanchor="firstPage"  class="fixed-menu__item active">
+      <a href="#firstPage" class="fixed-menu__link"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+    <li data-menuanchor="secondPage" class="fixed-menu__item">
+      <a href="#secondPage" class="fixed-menu__link"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+    <li data-menuanchor="2" class="fixed-menu__item">
+      <a href="#undefined" class="fixed-menu__link"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+    <li data-menuanchor="fourtPage" class="fixed-menu__item">
+      <a href="#fourtPage" class="fixed-menu__link"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+    <li data-menuanchor="fivePage" class="fixed-menu__item">
+      <a href="#fivePage" class="fixed-menu__link"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+    <li data-menuanchor="sixPage" class="fixed-menu__item">
+      <a href="#sixPage" class="fixed-menu__link"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+    <li data-menuanchor="sevenPage" class="fixed-menu__item">
+      <a href="#sevenPage" class="fixed-menu__link"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+    <li data-menuanchor="eightPage" class="fixed-menu__item">
+      <a href="#eightPage" class="fixed-menu__link"></a>
     </li>
   </ul>
-
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="./js/jquery.fancybox.min.js"></script>
+  <script src="./js/jquery.fullpage.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 
