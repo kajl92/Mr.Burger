@@ -29,6 +29,8 @@ $phones: 480px;
 @import "blocks/common/ingredients.scss";
 @import "blocks/common/composition.scss";
 @import "blocks/common/kkal.scss";
+@import "blocks/common/reviews-popup.scss";
+@import "blocks/common/phone-menu.scss";
 
 // blocks
 @import "blocks/hero.scss";
@@ -39,4 +41,3 @@ $phones: 480px;
 @import "blocks/reviews.scss";
 @import "blocks/order.scss";
 @import "blocks/contacts.scss";
-@import "blocks/phone-menu.scss";

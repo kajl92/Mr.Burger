@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная страница</title>
+  <link rel="stylesheet" href="./css/jquery.fancybox.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -237,10 +238,10 @@
                   <div class="composition__weight">80г</div>
                 </li>
               </ul>
-              <div class="cross">
-                <a href="#" class="cross__link">
+              <div class="close">
+                <a href="#" class="close__link">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px">
-                    <path fill-rule="evenodd" opacity="0.702" fill="#eb8262" d="M12.828,9.999 L18.485,15.656 C19.266,16.437 19.266,17.703 18.485,18.485 C17.704,19.266 16.438,19.266 15.657,18.485 L10.000,12.828 L4.343,18.485 C3.562,19.266 2.296,19.266 1.515,18.485 C0.734,17.703 0.734,16.437 1.515,15.656 L7.172,9.999 L1.515,4.342 C0.734,3.561 0.734,2.295 1.515,1.514 C2.296,0.733 3.562,0.733 4.343,1.514 L10.000,7.171 L15.657,1.514 C16.438,0.733 17.704,0.733 18.485,1.514 C19.266,2.295 19.266,3.561 18.485,4.342 L12.828,9.999 Z"
+                    <path fill-rule="evenodd" fill="#eb8262" d="M12.828,9.999 L18.485,15.656 C19.266,16.437 19.266,17.703 18.485,18.485 C17.704,19.266 16.438,19.266 15.657,18.485 L10.000,12.828 L4.343,18.485 C3.562,19.266 2.296,19.266 1.515,18.485 C0.734,17.703 0.734,16.437 1.515,15.656 L7.172,9.999 L1.515,4.342 C0.734,3.561 0.734,2.295 1.515,1.514 C2.296,0.733 3.562,0.733 4.343,1.514 L10.000,7.171 L15.657,1.514 C16.438,0.733 17.704,0.733 18.485,1.514 C19.266,2.295 19.266,3.561 18.485,4.342 L12.828,9.999 Z"
                     />
                   </svg>
                 </a>
@@ -266,9 +267,9 @@
             </div>
             <ul class="team-acco">
               <li class="team-acco__item">
-                <div class="team-acco__title">
+                <a href="#" class="team-acco__title">
                   Дэниэл Редклиф
-                </div>
+                </a>
                 <div class="team-acco__content">
                   <div class="team-acco__image">
                     <div class="team-acco__avatar">
@@ -287,10 +288,10 @@
                   </div>
                 </div>
               </li>
-              <li class="team-acco__item active">
-                <div class="team-acco__title">
+              <li class="team-acco__item">
+                <a href="#" class="team-acco__title">
                   Ричард Джеймс
-                </div>
+                </a>
                 <div class="team-acco__content">
                   <div class="team-acco__image">
                     <div class="team-acco__avatar">
@@ -310,9 +311,9 @@
                 </div>
               </li>
               <li class="team-acco__item">
-                <div class="team-acco__title">
+                <a href="#" class="team-acco__title">
                   Джейк Финн
-                </div>
+                </a>
                 <div class="team-acco__content">
                   <div class="team-acco__image">
                     <div class="team-acco__avatar">
@@ -332,9 +333,9 @@
                 </div>
               </li>
               <li class="team-acco__item">
-                <div class="team-acco__title">
+                <a href="#" class="team-acco__title">
                   Николай Иванов
-                </div>
+                </a>
                 <div class="team-acco__content">
                   <div class="team-acco__image">
                     <div class="team-acco__avatar">
@@ -438,7 +439,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                  <a href="#" class="btn btn_margit-top">Подробнее</a>
+                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -456,7 +457,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                  <a href="#" class="btn btn_margit-top">Подробнее</a>
+                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -474,7 +475,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                  <a href="#" class="btn btn_margit-top">Подробнее</a>
+                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -492,7 +493,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                  <a href="#" class="btn btn_margit-top">Подробнее</a>
+                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -510,7 +511,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                  <a href="#" class="btn btn_margit-top">Подробнее</a>
+                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -528,7 +529,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                  <a href="#" class="btn btn_margit-top">Подробнее</a>
+                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -546,7 +547,7 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                  <a href="#" class="btn btn_margit-top">Подробнее</a>
+                    <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -564,18 +565,41 @@
                   </p>
                 </div>
                 <div class="reviews__btn">
-                  <a href="#" class="btn btn_margit-top">Подробнее</a>
+                  <a href="#" class="btn btn_margit-top reviews-launcher" data-src="#reviews-popup">Подробнее</a>
                 </div>
               </div>
             </div>
           </li>
         </ul>
+        <div class="reviews-popup" id="reviews-popup">
+          <div class="reviews-popup__title">
+            <h2>
+              Константин Спилберг
+            </h2>
+            <div class="close">
+              <a href="#" class="close__link">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px">
+                  <path fill-rule="evenodd" opacity="0.702" fill="#eb8262" d="M12.828,9.999 L18.485,15.656 C19.266,16.437 19.266,17.703 18.485,18.485 C17.704,19.266 16.438,19.266 15.657,18.485 L10.000,12.828 L4.343,18.485 C3.562,19.266 2.296,19.266 1.515,18.485 C0.734,17.703 0.734,16.437 1.515,15.656 L7.172,9.999 L1.515,4.342 C0.734,3.561 0.734,2.295 1.515,1.514 C2.296,0.733 3.562,0.733 4.343,1.514 L10.000,7.171 L15.657,1.514 C16.438,0.733 17.704,0.733 18.485,1.514 C19.266,2.295 19.266,3.561 18.485,4.342 L12.828,9.999 Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="reviews__text">
+            <p>
+              Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
+              мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять,
+              невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр
+              таким расплавленным.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="section order">
         <div class="container section_position_center">
           <div class="section__title">Закажите доставку</div>
-          <form class="order__form-tag" id="order-form" action="mail.php">
+          <form class="order__form-tag" id="order-form">
             <div class="order__form">
               <div class="order__form-col">
                 <div class="order__form-row">
@@ -719,11 +743,11 @@
       <header class="header">
         <div class="logo">
           <a href="" class="logo__link">
-          <img src="./img/icons/logo.svg" alt="" class="logo__img">
-        </a>
+            <img src="./img/icons/logo.svg" alt="" class="logo__img">
+          </a>
         </div>
-        <div class="cross">
-          <a href="#" class="cross__link">
+        <div class="close">
+          <a href="#" class="close__link">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px">
               <path fill-rule="evenodd" opacity="0.702" fill="rgb(255, 255, 255)" d="M12.828,9.999 L18.485,15.656 C19.266,16.437 19.266,17.703 18.485,18.485 C17.704,19.266 16.438,19.266 15.657,18.485 L10.000,12.828 L4.343,18.485 C3.562,19.266 2.296,19.266 1.515,18.485 C0.734,17.703 0.734,16.437 1.515,15.656 L7.172,9.999 L1.515,4.342 C0.734,3.561 0.734,2.295 1.515,1.514 C2.296,0.733 3.562,0.733 4.343,1.514 L10.000,7.171 L15.657,1.514 C16.438,0.733 17.704,0.733 18.485,1.514 C19.266,2.295 19.266,3.561 18.485,4.342 L12.828,9.999 Z"
               />
@@ -781,8 +805,11 @@
     </li>
   </ul>
 
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="./js/jquery.fancybox.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

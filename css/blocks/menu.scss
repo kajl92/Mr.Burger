@@ -17,6 +17,10 @@
   right: 0;
   bottom: 0;
   display: flex;
+  max-width: 70%;
+  @include tablets {
+    max-width: 100%;
+  }
 }
 
 .menu-acco__item {
@@ -36,6 +40,11 @@
 	@include cover;
   position: relative;
   cursor: pointer;
+
+  @include phones {
+    width: rem(35px);
+  }
+
   &:before {
     position: absolute;
     top: 0;
@@ -60,24 +69,26 @@
   top: 100%;
   margin-top: rem(-20px);
   text-decoration: none;
+
+  @include phones {
+    font-size: rem(25px);
+  }
+
 }
 
 .menu-acco__content {
   display: flex;
-  height: 100%;
 	background: rgba(#2f3234, .93);
-	width: 0;
-	overflow: hidden;
+  width: 0;
+  overflow: hidden;
+  transition: .5s;
 }
 
-// .active_content {
-//   width: 100%;
-// }
-
-.menu-acco__text {
-  @include ubuntu(light);
-	font-size: rem(14px);
-	color: #fff;
-	padding: rem(60px) rem(30px);
-  line-height: 1.8;
+  
+  .menu-acco__text {
+    @include ubuntu(light);
+    font-size: rem(14px);
+    color: #fff;
+    padding: rem(60px) rem(30px);
+    line-height: 1.8;
 }

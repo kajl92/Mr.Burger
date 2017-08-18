@@ -7,7 +7,7 @@ $(function() {
   
     });
   
-    $('.cross__link').on('click', function(e) {
+    $('.close__link').on('click', function(e) {
       e.preventDefault()
   
       $('.phone-menu').fadeOut(1000);
@@ -65,6 +65,45 @@ $(function() {
 
 });
 
+//аккордион team
+$(function() {
+  
+    $('.team-acco__title').on('click', function(e) {
+      e.preventDefault()
+      
+      var elem = $(e.target),
+      item = elem.closest('.team-acco__item'),
+      content = item.find('.team-acco__content'),
+      items = item.siblings(),
+      otherContent = items.find('.team-acco__content');
+      
+  
+  
+      if(!item.hasClass('active')) {
+        items.removeClass('active');
+        item.addClass('active');
+  
+        otherContent.css({
+          'height' : 0
+        })
+  
+        content.css({
+          'height' : '100%'
+        })
+      } else {
+        item.removeClass('active')
+        content.css({
+          'height' : 0
+        })
+      }
+      
+  
+    });
+  
+  });
+
+
+// Яндекс карта
 $(function() {
   
   ymaps.ready(init);
@@ -81,7 +120,7 @@ $(function() {
   
       var myPlacemark = new ymaps.Placemark([56.48137438584522,84.94776321585691], {}, {
         iconLayout: 'default#image',
-        iconImageHref: './img/icons/map-marker.svg',
+        iconImageHref: '../img/icons/map-marker.svg',
         iconImageSize: [60, 60],
         iconImageOffset: [-3, -42]
       });
@@ -89,11 +128,23 @@ $(function() {
   
       var myPlacemark = new ymaps.Placemark([56.47658534556167,84.98254444562761], {}, {
         iconLayout: 'default#image',
-        iconImageHref: './img/icons/map-marker.svg',
+        iconImageHref: '../img/icons/map-marker.svg',
         iconImageSize: [60, 60],
         iconImageOffset: [-3, -42]
       });
       myMap.geoObjects.add(myPlacemark);
   };
+
+});
+
+// fancybox
+$(function() {
+  $('.reviews-launcher').fancybox();
+
+  $('.close__link').on('click', function(e) {
+    e.preventDefault()
+
+    $.fancybox.close();
+  });
 
 });
