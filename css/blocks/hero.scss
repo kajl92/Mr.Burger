@@ -65,6 +65,10 @@
   font-size: rem(13px);
   text-transform: uppercase;
   text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .header__links {
@@ -122,7 +126,7 @@
 .arrow {
   position: absolute;
   left: 50%;
-  bottom: -10%;
+  bottom: -20%;
   @include tablets() {
   left: 49%;
   bottom: 3%;

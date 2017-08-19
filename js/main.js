@@ -67,118 +67,142 @@ $(function () {
 
 // Яндекс карта
 $(function () {
-  
-    ymaps.ready(init);
-    var myMap;
-  
-    function init() {
-      myMap = new ymaps.Map("map", {
-        center: [56.47, 84.96],
-        zoom: 13,
-        controls: ["zoomControl", "fullscreenControl"]
-      });
-  
-      myMap.behaviors.disable('scrollZoom');
-  
-      var myPlacemark = new ymaps.Placemark([56.48137438584522, 84.94776321585691], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: '../img/icons/map-marker.svg',
-        iconImageSize: [60, 60],
-        iconImageOffset: [-3, -42]
-      });
-      myMap.geoObjects.add(myPlacemark);
-  
-      var myPlacemark = new ymaps.Placemark([56.47658534556167, 84.98254444562761], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: '../img/icons/map-marker.svg',
-        iconImageSize: [60, 60],
-        iconImageOffset: [-3, -42]
-      });
-      myMap.geoObjects.add(myPlacemark);
-    };
-  
-  });
 
-//menu-acco
-$(function() {
-  $('#fullpage').fullpage({
-    //Navigation
-		menu: '#menu',
-		lockAnchors: false,
-		anchors:['firstPage', 'secondPage'],
-		navigation: false,
-		navigationPosition: 'right',
-		navigationTooltips: ['firstSlide', 'secondSlide'],
-		showActiveTooltip: false,
-		slidesNavigation: false,
-		slidesNavPosition: 'bottom',
-    
-		//Scrolling
-		css3: true,
-		scrollingSpeed: 700,
-		autoScrolling: true,
-		fitToSection: true,
-		fitToSectionDelay: 1000,
-		scrollBar: true,
-		easing: 'easeInOutCubic',
-		easingcss3: 'ease',
-		loopBottom: true,
-		loopTop: true,
-		loopHorizontal: true,
-		continuousVertical: false,
-		continuousHorizontal: false,
-		scrollHorizontally: false,
-		interlockedSlides: false,
-		dragAndMove: false,
-		offsetSections: false,
-		resetSliders: false,
-		fadingEffect: false,
-		normalScrollElements: '#element1, .element2',
-		scrollOverflow: false,
-		scrollOverflowReset: false,
-		scrollOverflowOptions: null,
-		touchSensitivity: 15,
-		normalScrollElementTouchThreshold: 5,
-		bigSectionsDestination: null,
-    
-		//Accessibility
-		keyboardScrolling: true,
-		animateAnchor: true,
-		recordHistory: true,
-    
-		//Design
-		controlArrows: true,
-		verticalCentered: true,
-		sectionsColor : ['#ccc', '#fff'],
-		paddingTop: '0',
-		paddingBottom: '0',
-		fixedElements: '',
-		responsiveWidth: 0,
-		responsiveHeight: 0,
-		responsiveSlides: false,
-		parallax: false,
-		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-    
-		//Custom selectors
-		sectionSelector: '.section',
-		slideSelector: '.slide',
-    
-		lazyLoading: true,
-    
-		//events
-		onLeave: function(index, nextIndex, direction){},
-		afterLoad: function(anchorLink, index){},
-		afterRender: function(){},
-		afterResize: function(){},
-		afterResponsive: function(isResponsive){},
-		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-  });
+  ymaps.ready(init);
+  var myMap;
+
+  function init() {
+    myMap = new ymaps.Map("map", {
+      center: [56.47, 84.96],
+      zoom: 13,
+      controls: ["zoomControl", "fullscreenControl"]
+    });
+
+    myMap.behaviors.disable('scrollZoom');
+
+    var myPlacemark = new ymaps.Placemark([56.48137438584522, 84.94776321585691], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/icons/map-marker.svg',
+      iconImageSize: [60, 60],
+      iconImageOffset: [-3, -42]
+    });
+    myMap.geoObjects.add(myPlacemark);
+
+    var myPlacemark = new ymaps.Placemark([56.47658534556167, 84.98254444562761], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/icons/map-marker.svg',
+      iconImageSize: [60, 60],
+      iconImageOffset: [-3, -42]
+    });
+    myMap.geoObjects.add(myPlacemark);
+  };
+
+});
+
+//onepage
+$(function () {
+  var sections = $('.section'),
+    display = $('.maincontent'),
+    inScroll = false;
+
+    var md = new MobileDetect(window.navigator.userAgent),
+    isMobile = md.mobile();    
+
+  var performTransition = function (sectionEq) {
+
+    if (inScroll) return
+
+    inScroll = true;
+
+    var position = (sectionEq * -100) + '%';
+
+    display.css({
+      'transform': 'translateY(' + position + ')',
+      '-webkit-transform': 'translateY(' + position + ')'
+    })
+
+    sections.eq(sectionEq).addClass('active')
+      .siblings().removeClass('active');
+
+    setTimeout(function () {
+      inScroll = false;
+      $('.fixed-menu__item').eq(sectionEq).addClass('active')
+        .siblings().removeClass('active');
+    }, 1300);
+  }
+
+  var defineSections = function (sections) {
+    var activeSection = sections.filter('.active');
+    return {
+      activeSection: activeSection,
+      nextSection: activeSection.next(),
+      prevSection: activeSection.prev()
+    }
+  }
   
-  $('#fullpage').fullpage({
-    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fivePage', 'sixPage', 'sevenPage', 'eightPage'],
-    menu: '#myMenu'
+  var scrollToSection = function (direction) {
+    var section = defineSections(sections);
+
+    if (direction == 'up' && section.nextSection.length) { //скроллим вверх
+      performTransition(section.nextSection.index());
+    }
+
+    if (direction == 'down' && section.prevSection.length) { //скроллим вниз
+      performTransition(section.prevSection.index());
+    }
+  }
+
+$('.wrapper').on({
+  wheel: function (e) {
+    var deltaY = e.originalEvent.deltaY;
+    var direction = deltaY > 0
+    ? 'up'
+    : 'down';
+
+    scrollToSection(direction)
+  },
+
+  touchmove: function (e) {
+    e.preventDefault();
+  }
+});
+
+
+$(document).on('keydown', function (e) {
+  var section = defineSections(sections);
+
+  switch (e.keyCode) {
+    case 40: //вверх
+      if (section.nextSection.length) {
+        performTransition(section.nextSection.index());
+      }
+      break;
+    case 38: //вниз
+      if (section.prevSection.length) {
+        performTransition(section.prevSection.index());
+      }
+      break;
+
+  }
+});
+
+$('[data-scroll-to]').on('click', function (e) {
+  e.preventDefault()
+
+  var elem = $(e.target);
+  var sectionNum = parseInt(elem.attr('data-scroll-to'));
+
+  performTransition(sectionNum);
+});
+
+if (isMobile) {
+  $(window).swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      scrollToSection(direction);
+    }
   });
+}
+
 });
 
 // fancybox

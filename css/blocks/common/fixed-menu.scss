@@ -1,45 +1,65 @@
 .fixed-menu {
-  position: fixed;
-  top: 80px;
-  right: 45px;
+	position: fixed;
+	top: rem(90px);
+	right: rem(40px);
 
-  @include tablets () {
-    display: none;
-  }
-}
-
-.fixed-menu__item {
-  margin-bottom: 10px;
-
-  &.active {
-    .fixed-menu__link {
-      border-color: #fff;
-    }
-  }
+	@include tablets {
+		display: none;
+	}
 }
 
 .fixed-menu__link {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  position: relative;
-  display: block;
-  border: 1px solid transparent;
+	width: rem(16px);
+	height: rem(16px);
+	display: block;
+	position: relative;
 
-  &:hover {
-    border-color: #fff;
-  }
+	&:after, &:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+	}
 
-  &:before {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+	&:after {
+		width: rem(6px);
+		height: rem(6px);
+		background: #fff;
+	}
+
+	&:before {
+		width: rem(0px);
+		height: rem(0px);
+		border-radius: 50%;
+		border: rem(1px) solid #fff;
+		opacity: 0;
+		transition: .3s;
+	}
+
+	&:hover {
+		&:before {
+			width: rem(14px);
+			height: rem(14px);
+			opacity: 1;
+		}
+	}
+}
+
+.fixed-menu__item {
+	&.active {
+		.fixed-menu__link {
+			&:before {
+				width: rem(14px);
+				height: rem(14px);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.fixed-menu__item {
+	margin-bottom: rem(5px);
 }
