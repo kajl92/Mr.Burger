@@ -63,12 +63,9 @@
   }
  
   &.active {
-    .team-acco__content {
-      height: auto; 
-    }
-
     .team-acco__title {
       color: $yellow;
+      transition: .3s;
       
 
       &:before {
@@ -104,6 +101,7 @@
     border-top-color: $yellow;
     border-bottom: none;
     margin-right: rem(10px);
+    transition: .3s;
   }
 }
 
@@ -112,6 +110,7 @@
   height: 0;
   overflow: hidden;
   margin-left: rem(17px);
+  
 
   @include tablets() {
     margin-left: 0;

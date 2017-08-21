@@ -1,3 +1,4 @@
+// меню для tablets and phones
 $(function () {
 
   $('.hamburger-menu-link').on('click', function (e) {
@@ -16,6 +17,21 @@ $(function () {
 
 });
 
+//slider
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    responsive: {
+      0: {
+        items: 1,
+        margin: 50,
+        loop: true,
+        nav: true,
+        autoHeight: false
+      }
+    }
+
+  });
+});
 
 //состав
 $(function () {
@@ -23,6 +39,45 @@ $(function () {
   $('.ingredients').on('click', function () {
 
     $('.composition').slideToggle(300);
+
+  });
+
+});
+
+//аккордион меню
+
+$(function () {
+
+  $('.menu-acco__trigger').on('click', function (e) {
+    e.preventDefault()
+
+    var elem = $(e.target),
+      item = elem.closest('.menu-acco__item'),
+      content = item.find('.menu-acco__content'),
+      items = item.siblings(),
+      otherContent = items.find('.menu-acco__content');
+
+
+
+    if (!item.hasClass('active')) {
+      items.removeClass('active');
+      item.addClass('active');
+      item.show('active');
+
+      otherContent.css({
+        'width': 0
+      })
+
+      content.css({
+        'width': '20rem'
+      })
+    } else {
+      item.removeClass('active')
+      content.css({
+        'width': 0
+      })
+    }
+
 
   });
 
@@ -45,18 +100,22 @@ $(function () {
     if (!item.hasClass('active')) {
       items.removeClass('active');
       item.addClass('active');
+      item.show('active');
 
       otherContent.css({
-        'height': 0
+        'height': 0,
+        'animation': 'slideOutUp .3s'
       })
 
       content.css({
-        'height': '100%'
+        'height': '100%',
+        'animation': 'slideInDown .3s'
       })
     } else {
       item.removeClass('active')
       content.css({
-        'height': 0
+        'height': 0,
+        'animation': 'slideOutUp .3s'
       })
     }
 
@@ -82,7 +141,7 @@ $(function () {
 
     var myPlacemark = new ymaps.Placemark([56.48137438584522, 84.94776321585691], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/icons/map-marker.svg',
+      iconImageHref: './img/icons/map-marker.svg',
       iconImageSize: [60, 60],
       iconImageOffset: [-3, -42]
     });
@@ -90,7 +149,7 @@ $(function () {
 
     var myPlacemark = new ymaps.Placemark([56.47658534556167, 84.98254444562761], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/icons/map-marker.svg',
+      iconImageHref: './img/icons/map-marker.svg',
       iconImageSize: [60, 60],
       iconImageOffset: [-3, -42]
     });
@@ -105,8 +164,8 @@ $(function () {
     display = $('.maincontent'),
     inScroll = false;
 
-    var md = new MobileDetect(window.navigator.userAgent),
-    isMobile = md.mobile();    
+  var md = new MobileDetect(window.navigator.userAgent),
+    isMobile = md.mobile();
 
   var performTransition = function (sectionEq) {
 
@@ -139,7 +198,7 @@ $(function () {
       prevSection: activeSection.prev()
     }
   }
-  
+
   var scrollToSection = function (direction) {
     var section = defineSections(sections);
 
@@ -152,56 +211,56 @@ $(function () {
     }
   }
 
-$('.wrapper').on({
-  wheel: function (e) {
-    var deltaY = e.originalEvent.deltaY;
-    var direction = deltaY > 0
-    ? 'up'
-    : 'down';
+  $('.wrapper').on({
+    wheel: function (e) {
+      var deltaY = e.originalEvent.deltaY;
+      var direction = deltaY > 0 ?
+        'up' :
+        'down';
 
-    scrollToSection(direction)
-  },
+      scrollToSection(direction)
+    },
 
-  touchmove: function (e) {
-    e.preventDefault();
-  }
-});
-
-
-$(document).on('keydown', function (e) {
-  var section = defineSections(sections);
-
-  switch (e.keyCode) {
-    case 40: //вверх
-      if (section.nextSection.length) {
-        performTransition(section.nextSection.index());
-      }
-      break;
-    case 38: //вниз
-      if (section.prevSection.length) {
-        performTransition(section.prevSection.index());
-      }
-      break;
-
-  }
-});
-
-$('[data-scroll-to]').on('click', function (e) {
-  e.preventDefault()
-
-  var elem = $(e.target);
-  var sectionNum = parseInt(elem.attr('data-scroll-to'));
-
-  performTransition(sectionNum);
-});
-
-if (isMobile) {
-  $(window).swipe({
-    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-      scrollToSection(direction);
+    touchmove: function (e) {
+      e.preventDefault();
     }
   });
-}
+
+
+  $(document).on('keydown', function (e) {
+    var section = defineSections(sections);
+
+    switch (e.keyCode) {
+      case 40: //вверх
+        if (section.nextSection.length) {
+          performTransition(section.nextSection.index());
+        }
+        break;
+      case 38: //вниз
+        if (section.prevSection.length) {
+          performTransition(section.prevSection.index());
+        }
+        break;
+
+    }
+  });
+
+  $('[data-scroll-to]').on('click', function (e) {
+    e.preventDefault()
+
+    var elem = $(e.target);
+    var sectionNum = parseInt(elem.attr('data-scroll-to'));
+
+    performTransition(sectionNum);
+  });
+
+  if (isMobile) {
+    $(window).swipe({
+      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        scrollToSection(direction);
+      }
+    });
+  }
 
 });
 

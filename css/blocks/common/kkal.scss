@@ -1,11 +1,11 @@
 .kkal {
   position: absolute;
-  bottom: 15%;
-  left: 24%;
+  bottom: 0;
+  left: 0;
 
   @include tablets {
-    top: 3%;
-    right: 15%;
+    top: 0;
+    right: 0;
     bottom: inherit;
     left: inherit;
   }

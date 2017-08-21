@@ -500,6 +500,26 @@ footer {
   max-width: 58.75rem;
   flex-direction: column; }
 
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -10%, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+.slideInDown {
+  animation-name: slideInDown; }
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -10%, 0); } }
+
+.slideOutUp {
+  animation-name: slideOutUp; }
+
 .btn {
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 500;
@@ -610,16 +630,16 @@ footer {
   background: rgba(228, 80, 40, 0.44);
   border-radius: 0.3125rem;
   position: absolute;
-  top: 14%;
-  left: 24%;
+  top: 0;
+  left: 0;
   cursor: pointer;
   transition: .3s; }
   .ingredients:hover {
     background: #e45028; }
   @media screen and (max-width: 768px) {
     .ingredients {
-      top: 3%;
-      left: 15%; } }
+      top: 0;
+      left: 0; } }
 
 .ingredients__wrapper {
   padding: 0.625rem 1.375rem; }
@@ -685,12 +705,12 @@ footer {
 
 .kkal {
   position: absolute;
-  bottom: 15%;
-  left: 24%; }
+  bottom: 0;
+  left: 0; }
   @media screen and (max-width: 768px) {
     .kkal {
-      top: 3%;
-      right: 15%;
+      top: 0;
+      right: 0;
       bottom: inherit;
       left: inherit; } }
 
@@ -753,8 +773,7 @@ footer {
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      display: none; }
+      bottom: 0; }
       .phone-menu .header {
         justify-content: space-between; } }
 
@@ -787,6 +806,50 @@ footer {
     color: #fff;
     font-size: 1.5rem;
     text-transform: uppercase; } }
+
+.popup {
+  display: none; }
+
+.full-review {
+  padding: 25px 20px;
+  position: relative; }
+
+.full-review__title {
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 25px; }
+
+.full-review__content {
+  font-size: 14px;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300; }
+
+.full-review__close {
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: .7;
+  transition: .3s; }
+  .full-review__close:hover {
+    opacity: 1; }
+
+.status-popup__inner {
+  padding: 20px;
+  text-align: center; }
+
+.status-popup__message {
+  margin-bottom: 20px;
+  font-size: 14px; }
+
+.status-popup {
+  width: 240px; }
+
+.error-message {
+  color: #c1401e; }
 
 .hero {
   background: url("../img/background/hero.jpg") center center no-repeat;
@@ -951,6 +1014,20 @@ footer {
   display: flex;
   align-items: center; }
 
+.scroll__image {
+  position: absolute;
+  top: 50%;
+  z-index: 1; }
+
+.scroll__link {
+  display: block; }
+
+.scroll__image-prev {
+  left: -3%; }
+
+.scroll__image-next {
+  right: -3%; }
+
 .burger__list {
   display: flex;
   align-items: center;
@@ -1018,6 +1095,30 @@ footer {
 .burger__cash-small {
   font-size: 1.875rem; }
 
+.owl-next {
+  background: url("../img/icons/arrow-scroll.svg") center center no-repeat;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  width: 27px;
+  overflow: hidden;
+  height: 23px;
+  padding-left: 27px; }
+
+.owl-prev {
+  background: url("../img/icons/arrow-scroll.svg") center center no-repeat;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  left: -3%;
+  content: '';
+  display: block;
+  width: 27px;
+  overflow: hidden;
+  height: 23px;
+  padding-left: 27px; }
+
 .team {
   background: url("../img/background/team.jpg") center top no-repeat;
   background-size: cover;
@@ -1070,10 +1171,9 @@ footer {
   @media screen and (max-width: 480px) {
     .team-acco__item {
       margin-bottom: 1.1rem; } }
-  .team-acco__item.active .team-acco__content {
-    height: auto; }
   .team-acco__item.active .team-acco__title {
-    color: #f9b43b; }
+    color: #f9b43b;
+    transition: .3s; }
     .team-acco__item.active .team-acco__title:before {
       transform: rotate(-180deg); }
 
@@ -1099,7 +1199,8 @@ footer {
     border: 0.4375rem solid transparent;
     border-top-color: #f9b43b;
     border-bottom: none;
-    margin-right: 0.625rem; }
+    margin-right: 0.625rem;
+    transition: .3s; }
 
 .team-acco__content {
   display: flex;

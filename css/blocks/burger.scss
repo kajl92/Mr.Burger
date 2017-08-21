@@ -9,6 +9,24 @@
   align-items: center;
 }
 
+.scroll__image {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.scroll__link {
+  display: block;
+}
+
+.scroll__image-prev {
+  left: -3%;
+}
+
+.scroll__image-next {
+  right: -3%;
+}
+
 .burger__list {
   display: flex;
   align-items: center;
@@ -90,6 +108,33 @@
 .burger__cash-small {
   font-size: rem(30px);
 }
+
+.owl-next {
+  background: url('../img/icons/arrow-scroll.svg') center center no-repeat;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  width: 27px;
+  overflow: hidden;
+  height: 23px;
+  padding-left: 27px;
+}
+
+.owl-prev {
+  background: url('../img/icons/arrow-scroll.svg') center center no-repeat;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  left: -3%;
+  content: '';
+  display: block;
+  width: 27px;
+  overflow: hidden;
+  height: 23px;
+  padding-left: 27px;
+}
+
 
 // .burger__menu {
 //   display: flex;

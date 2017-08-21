@@ -2,8 +2,8 @@
   background: rgba($orange, .44);
   border-radius: rem(5px);    
   position: absolute;
-  top: 14%;
-  left: 24%;
+  top: 0;
+  left: 0;
   cursor: pointer;
   transition: .3s;
 
@@ -12,8 +12,8 @@
   }
 
   @include tablets {
-    top: 3%;
-    left: 15%;
+    top: 0;
+    left: 0;
   }
 
 }

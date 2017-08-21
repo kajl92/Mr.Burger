@@ -20,6 +20,7 @@ $phones: 480px;
 @import "_misc/mixins";
 @import "_misc/fonts";
 @import "_misc/layout";
+@import "_misc/animations.scss";
 
 //common
 @import "blocks/common/btn.scss";
@@ -31,6 +32,7 @@ $phones: 480px;
 @import "blocks/common/kkal.scss";
 @import "blocks/common/reviews-popup.scss";
 @import "blocks/common/phone-menu.scss";
+@import "blocks/common/popup-form.scss";
 
 // blocks
 @import "blocks/hero.scss";
