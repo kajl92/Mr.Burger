@@ -1,5 +1,11 @@
 .popup {
-	display: none;
+	background: #fff;
+	display: none;    
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 5px;
 }
 
 .full-review {
