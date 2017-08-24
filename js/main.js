@@ -15,6 +15,13 @@ $(function () {
 
   });
 
+  $('.phone-menu__link').on('click', function (e) {
+    e.preventDefault()
+
+    $('.phone-menu').fadeOut(100);
+
+  });
+
 });
 
 //slider
