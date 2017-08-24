@@ -45,43 +45,34 @@ $(function () {
 });
 
 //аккордион меню
-
 $(function () {
-
   $('.menu-acco__trigger').on('click', function (e) {
-    e.preventDefault()
 
+
+    e.preventDefault();
     var elem = $(e.target),
       item = elem.closest('.menu-acco__item'),
       content = item.find('.menu-acco__content'),
-      items = item.siblings(),
-      otherContent = items.find('.menu-acco__content');
+      otherItems = item.siblings(),
+      otherItemsContent = otherItems.find('.menu-acco__content'),
+      itemsWidth = $('.menu-acco__item').length * $('.menu-acco__trigger').width();
 
-
+    $(window).width() < 769 ?
+      openWidth = $(window).width() - itemsWidth :
+      openWidth = $(window).width() * 0.65 - itemsWidth
 
     if (!item.hasClass('active')) {
-      items.removeClass('active');
-      item.addClass('active');
-      item.show('active');
-
-      otherContent.css({
-        'width': 0
-      })
-
-      content.css({
-        'width': '20rem'
-      })
+      otherItems.removeClass('active'),
+        item.addClass('active'),
+        otherItemsContent.css('width', '0'),
+        content.css('width', openWidth)
     } else {
-      item.removeClass('active')
-      content.css({
-        'width': 0
-      })
+      item.removeClass('active'),
+        content.css('width', '0')
     }
 
-
-  });
-
-});
+  })
+})
 
 //аккордион team
 $(function () {

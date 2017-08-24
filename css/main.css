@@ -780,7 +780,7 @@ footer {
 
 .kkal {
   position: absolute;
-  bottom: 0;
+  bottom: 4%;
   left: 0; }
   @media screen and (max-width: 768px) {
     .kkal {
@@ -1620,7 +1620,8 @@ footer {
   text-decoration: none; }
   @media screen and (max-width: 480px) {
     .menu-acco__trigger-text {
-      font-size: 1.5625rem; } }
+      font-size: 1.5625rem;
+      top: 87%; } }
 
 .menu-acco__content {
   display: -webkit-box;
