@@ -41,10 +41,13 @@
   font-size: rem(14px);
   padding: rem(10px);
   padding: rem(5px) rem(10px);
-  border: rem(1px) solid #d1cfcb;
+  border: rem(2px) solid #d1cfcb;
   border-radius: rem(5px);
   width: 100%;
   outline: none;
+  &:focus {
+    border: rem(2px) solid $yellow; 
+  }
 }
 
 .order__form-block {

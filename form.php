@@ -86,8 +86,8 @@ if(!isset($_POST['payment']))
     $status['error']='Выберите тип оплаты';
 }
 
-echo json_encode($status);
 if($result){
     mail('kajl92@mail.ru', 'Заказ', $mail_message);//Отправляем на почту
 }
+echo json_encode($status);
 ?>
