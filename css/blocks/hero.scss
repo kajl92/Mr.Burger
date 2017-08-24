@@ -5,7 +5,6 @@
 
 .hero__wrapper {
   height: 80%;
-  
   @include tablets() {
     height: 100%;
   }
@@ -36,7 +35,7 @@
   display: flex;
   align-items: center;
   margin-right: rem(15px);
-  @include tablets() {
+  @include tablets {
     display: none;
   }
 }
@@ -65,7 +64,6 @@
   font-size: rem(13px);
   text-transform: uppercase;
   text-decoration: none;
-  
   &:hover {
     text-decoration: underline;
   }
@@ -87,13 +85,11 @@
 .hero__present {
   display: flex;
   align-items: center;
-
   @include tablets () {
     flex-direction: column;
     padding: 0 17%;
     text-align: center;
   }
-
   @include phones {
     padding: 0;
   }
@@ -117,7 +113,6 @@
   font-size: rem(65px);
   color: #fff;
   line-height: 1;
-
   @include phones () {
     font-size: rem(54px);
   }
@@ -128,7 +123,22 @@
   left: 50%;
   bottom: -20%;
   @include tablets() {
-  left: 49%;
-  bottom: 3%;
+    left: 49%;
+    bottom: 3%;
+  }
+}
+
+.arrow__image-pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: rem(30px);
+  border-bottom: rem(1px) solid transparent;
+  transition: .5s;
+
+  &:hover {
+    width: rem(37px);
+    border-bottom: rem(30px) solid transparent;
   }
 }
